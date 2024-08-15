@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "src": "/images/portfolio/freshbite.png",
+    "title": "FreshBite- Food delivery App ",
+    "description": "The application utilized React as the framework",
+    "demoUrl": "https://freshbitefood.netlify.app/",
+    "codeUrl": "https://github.com/PrabinMhzn/React-food-delivery-app"
+  },
+  {
+    "id": 2,
+    "src": "",
+    "title": "Expense Tracker",
+    "demoUrl": "https://example.com/demo2",
+    "codeUrl": "https://example.com/code2"
+  },
+  {
+    "id": 3,
+    "src": "data/flower.jpg",
+    "title": "Project 3",
+    "description": "",
+    "demoUrl": "#",
+    "codeUrl": "https://example.com/code3"
+  },
+  {
+    "id": 4,
+    "src": "data/junction.jpg",
+    "title": "Project 4",
+    "description": "",
+    "demoUrl": "https://example.com/demo4",
+    "codeUrl": "https://example.com/code4"
+  },
+  {
+    "id": 5,
+    "src": "#",
+    "title": "Project 5",
+    "description": "",
+    "demoUrl": "https://example.com/demo5",
+    "codeUrl": "https://example.com/code5"
+  }
+]
