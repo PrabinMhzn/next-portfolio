@@ -1,45 +1,71 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
-const Timeline = () => {
+interface TimelineEvent {
+  date: string;
+  title: string;
+  description: string;
+}
+
+const VerticalTimeline: React.FC = () => {
+  const [events, setEvents] = useState<TimelineEvent[]>([]);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Fetch the JSON data
+    fetch("/data/timeline.json")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => setEvents(data))
+      .catch((error) => {
+        console.error("Error fetching timeline data:", error);
+        setError("Error loading timeline data.");
+      });
+  }, []);
+
+  if (error) {
+    return <div>{error}</div>;
+  }
+
   return (
-    <div className="flex flex-col md:grid md:grid-cols-9 md:gap-4">
-      <div className="timeline-item md:col-start-1 md:col-end-3 mb-10">
-        <div className="flex items-center justify-end">
-          <div className="bg-blue-500 text-white p-4 rounded-full w-8 h-8 flex items-center justify-center">
-            1
-          </div>
-          <div className="bg-gray-100 p-6 rounded-lg ml-4 shadow-lg">
-            <div className="text-sm text-gray-500">2024 - Present</div>
-            <h3 className="text-lg font-semibold">
-              Front-End Developer at ABC Corp
-            </h3>
-            <p className="text-gray-700 mt-2">
-              Led the redesign of the company’s main product, resulting in a 20%
-              increase in user engagement.
-            </p>
-          </div>
-        </div>
-      </div>
+    <main>
+      {/* Vertical Line */}
 
-      <div className="timeline-item md:col-start-3 md:col-end-7 mb-10">
-        <div className="flex items-center justify-start">
-          <div className="bg-blue-500 text-white p-4 rounded-full w-8 h-8 flex items-center justify-center">
-            2
-          </div>
-          <div className="bg-gray-100 p-6 rounded-lg ml-4 shadow-lg">
-            <div className="text-sm text-gray-500">2022 - 2024</div>
-            <h3 className="text-lg font-semibold">
-              Barista at The Coffee Emporium
-            </h3>
-            <p className="text-gray-700 mt-2">
-              Managed customer service and developed a system to streamline
-              order processing.
-            </p>
-          </div>
+      <div className="relative flex flex-col items-center py-10">
+        <div className="w-full flex flex-col items-center space-y-12">
+          {events.length === 0 ? (
+            <div>Loading...</div>
+          ) : (
+            events.map((event, index) => (
+              <motion.div
+                key={index}
+                className="flex items-center"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              >
+                {/* Circle Indicator */}
+                <div className="flex gap-8 justify-center items-center">
+                  <p className="text-neutral-500 font-bold">{event.date} </p>
+                  <div className="w-2 h-16 bg-lime-500 rounded-full flex items-center justify-center"></div>
+                </div>
+
+                {/* Event Details */}
+                <div className="px-4">
+                  <h3 className="text-xl font-semibold">{event.title}</h3>
+                  <p className="text-gray-700 mt-2">{event.description}</p>
+                </div>
+              </motion.div>
+            ))
+          )}
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 
-export default Timeline;
+export default VerticalTimeline;

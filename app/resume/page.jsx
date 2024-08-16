@@ -13,9 +13,9 @@ function Resume() {
           <div className="  flex-col p-4 px-8 text-center bg-yellow-600">
             <h1 className="text-4xl uppercase mb-2">Prabin Maharjan</h1>
             <Separator orientation="horizontal" className="mb-4" />
-            <div className="flex h-8 items-center space-x-4 text-sm">
+            <div className="flex h-8 items-center space-x-4 text-sm gap-4">
               <h1 className="text-2xl  mb-2 ">Software Engineer</h1>
-              <Separator orientation="vertical" />
+              <Separator orientation="vertical " />
               <h1 className="text-2xl  mb-2 ">Fullstack Developer</h1>
             </div>
             <div className="flex gap-8 items-center justify-center mt-8 bg-slate-500 ">
