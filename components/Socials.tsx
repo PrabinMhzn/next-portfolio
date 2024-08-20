@@ -62,7 +62,7 @@ export function SocialFloatingDock() {
     },
   ];
   return (
-    <div className="flex items-end justify-center h-[35rem] w-full">
+    <div className="flex justify-center h-[8rem] w-full mt-8">
       <FloatingDock mobileClassName="translate-x-40" items={links} />
     </div>
   );

@@ -61,7 +61,7 @@ const Portfolio: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-4xl font-bold inline border-b-4 border-black">
+          <p className="text-4xl font-bold inline border-b-4 border-lime-400">
             Portfolio
           </p>
           <p className="py-4">Check out my works here</p>
