@@ -41,7 +41,7 @@ const HireMeModal: React.FC<ModalProps> = ({ isOpen, onClose, children }) => {
       >
         <div className="flex justify-between items-center border-b border-gray-200 px-6 py-4">
           <h3 className="text-lg font-bold text-gray-900 uppercase">
-            Let's Collaborate !
+            Let&apos;s Collaborate !
           </h3>
           <button
             onClick={onClose}

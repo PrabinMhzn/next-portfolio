@@ -31,7 +31,7 @@ Join me on this exciting journey as I continue to grow and create impactful solu
     }, 50); // Adjust typing speed here (lower is faster)
 
     return () => clearInterval(typingInterval);
-  }, []);
+  }, [fullText]);
 
   useEffect(() => {
     const cursorInterval = setInterval(() => {

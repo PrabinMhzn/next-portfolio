@@ -32,7 +32,7 @@ const ContactPage = () => {
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/2 p-8">
             <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-6">
-              Let's Connect.
+              Let&apos;s Connect.
             </h1>
             {!isFormSubmitted ? (
               <ContactForm onSubmit={handleSubmit} />
@@ -43,7 +43,7 @@ const ContactPage = () => {
                 transition={{ duration: 0.5 }}
                 className="text-lime-600 dark:text-lime-400 text-xl font-semibold"
               >
-                Thank you for your message! I'll get back to you soon.
+                Thank you for your message! I will get back to you soon.
               </motion.div>
             )}
           </div>
@@ -51,8 +51,8 @@ const ContactPage = () => {
             <div className="flex flex-col justify-stretch">
               <h2 className="text-3xl font-bold mb-16">Get in Touch</h2>
               <p className="mb-16">
-                I'm always open to new opportunities and interesting projects.
-                Feel free to reach out!
+                I&apos;m always open to new opportunities and interesting
+                projects. Feel free to reach out!
               </p>
               <div className="space-y-4">
                 <motion.div whileHover={{ x: 5 }} className="flex items-center">
