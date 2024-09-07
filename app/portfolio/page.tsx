@@ -53,7 +53,7 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center  mb-8">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full min-h-screen">
         <motion.div
           className="pb-8 mt-16"

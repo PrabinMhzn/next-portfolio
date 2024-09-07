@@ -6,6 +6,7 @@ import {
   IconExchange,
   IconBrandLinkedin,
   IconDownload,
+  IconMail,
 } from "@tabler/icons-react";
 import Image from "next/image";
 
@@ -34,9 +35,11 @@ export function SocialFloatingDock() {
       href: "/ResumeSD.pdf",
     },
     {
-      title: "Aceternity UI",
-      icon: <Image src="" width={20} height={20} alt="Aceternity Logo" />,
-      href: "#",
+      title: "Email",
+      icon: (
+        <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "mailto:foo.gmail.com",
     },
     {
       title: "Changelog",

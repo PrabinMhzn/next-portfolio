@@ -36,7 +36,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
 
       <div className="px-6 py-4">
         <div className="h-auto mb-4">
-          <h1 className="font-bold text-xl mb-2 text-gray-800 mt-4 underline">
+          <h1 className="font-bold text-xl mb-2 text-gray-800 mt-4 ">
             {title}
           </h1>
         </div>

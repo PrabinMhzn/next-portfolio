@@ -10,32 +10,32 @@
   {
     "id": 2,
     "src": "",
-    "title": "Expense Tracker",
-    "demoUrl": "https://example.com/demo2",
-    "codeUrl": "https://example.com/code2"
+    "title": "Counterculture-Blogsite",
+    "demoUrl": "#",
+    "codeUrl": "https://github.com/PrabinMhzn/CounterCulture.git"
   },
   {
     "id": 3,
-    "src": "data/flower.jpg",
-    "title": "Project 3",
-    "description": "",
-    "demoUrl": "#",
-    "codeUrl": "https://example.com/code3"
+    "src": "/images/portfolio/deliciouspageimage.png",
+    "title": "Delicious Mo:Mo",
+    "description": "Delicious Momo consists for extensive use of next js framework ",
+    "demoUrl": "https://delicious-food-one-iota.vercel.app/",
+    "codeUrl": "https://github.com/PrabinMhzn/delicious-food.git"
   },
   {
     "id": 4,
     "src": "data/junction.jpg",
     "title": "Project 4",
     "description": "",
-    "demoUrl": "https://example.com/demo4",
-    "codeUrl": "https://example.com/code4"
+    "demoUrl": "#",
+    "codeUrl": "#"
   },
   {
     "id": 5,
     "src": "#",
     "title": "Project 5",
     "description": "",
-    "demoUrl": "https://example.com/demo5",
-    "codeUrl": "https://example.com/code5"
+    "demoUrl": "#",
+    "codeUrl": "#"
   }
 ]
