@@ -52,7 +52,7 @@ const Home: React.FC = () => {
           <motion.span
             className="text-lime-400 uppercase"
             animate={{
-              color: ["#84cc16", "#22c55e", "#84cc16"],
+              color: ["#84cc16", "#82c55e", "#84cc16"],
               transition: { duration: 4, repeat: Infinity, ease: "easeInOut" },
             }}
           >
@@ -87,6 +87,9 @@ const Home: React.FC = () => {
           <SocialFloatingDock />
         </motion.div>
       </motion.section>
+      <motion.section variants={itemVariants}>
+        <Portfolio />
+      </motion.section>
 
       <motion.section variants={itemVariants}>
         <About />
@@ -94,10 +97,6 @@ const Home: React.FC = () => {
 
       <motion.section variants={itemVariants}>
         <Skills />
-      </motion.section>
-
-      <motion.section variants={itemVariants}>
-        <Portfolio />
       </motion.section>
     </motion.main>
   );

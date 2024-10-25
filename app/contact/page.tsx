@@ -22,16 +22,16 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center  p-4">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="w-full max-w-4xl bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden"
+        className="w-full max-w-4xl bg-white dark:bg-neutral-800 rounded-2xl shadow-2xl overflow-hidden"
       >
         <div className="flex flex-col md:flex-row">
           <div className="w-full md:w-1/2 p-8">
-            <h1 className="text-4xl font-bold text-gray-800 dark:text-white mb-6">
+            <h1 className="text-4xl font-bold text-neutral-300 dark:text-white mb-6">
               Let&apos;s Connect.
             </h1>
             {!isFormSubmitted ? (

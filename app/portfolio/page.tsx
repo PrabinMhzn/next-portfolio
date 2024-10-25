@@ -11,6 +11,7 @@ import {
   DrawerTitle,
 } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface PortfolioItem {
   id: number;
@@ -82,6 +83,14 @@ const Portfolio: React.FC = () => {
             </motion.div>
           ))}
         </div>
+      </div>
+
+      <div>
+        <Link href="/ExplainationPage" passHref>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            View Documentation
+          </button>
+        </Link>
       </div>
 
       <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>

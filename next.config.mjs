@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import withMarkdoc from "@markdoc/next.js";
 
-export default nextConfig;
+const nextConfig = {
+  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdoc"],
+};
+
+export default withMarkdoc()(nextConfig);

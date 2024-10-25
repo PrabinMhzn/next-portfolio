@@ -33,11 +33,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div>
-        <label
-          htmlFor="name"
-          className="block text-md font-medium text-gray-700"
-        >
+      <div className="text-neutral-300">
+        <label htmlFor="name" className="block text-md font-medium">
           Name
         </label>
         <input
@@ -51,10 +48,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
         />
       </div>
       <div>
-        <label
-          htmlFor="email"
-          className="block text-sm font-medium text-gray-700"
-        >
+        <label htmlFor="email" className="block text-sm font-medium ">
           Email
         </label>
         <input
@@ -68,10 +62,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
         />
       </div>
       <div>
-        <label
-          htmlFor="subject"
-          className="block text-sm font-medium text-gray-700"
-        >
+        <label htmlFor="subject" className="block text-sm font-medium">
           Contact
         </label>
         <input
@@ -84,10 +75,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
         />
       </div>
       <div>
-        <label
-          htmlFor="message"
-          className="block text-sm font-medium text-gray-700 "
-        >
+        <label htmlFor="message" className="block text-sm font-medium  ">
           Message
         </label>
         <textarea

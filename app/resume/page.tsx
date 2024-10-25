@@ -4,6 +4,7 @@ import React from "react";
 function Resume() {
   return (
     <div className="flex flex-col items-center justify-center w-screen min-h-screen mb-8 ">
+      <button className="text-white">Resume</button>
       <h1 className="text-4xl text-lime-500">
         Prabin.<span className="text-neutral-700">Timeline</span>
       </h1>

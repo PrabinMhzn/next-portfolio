@@ -11,7 +11,6 @@ import {
   FaPython,
 } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
-import { cn } from "@/lib/utils";
 
 const initialSkills = [
   {
