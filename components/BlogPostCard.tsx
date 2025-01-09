@@ -14,7 +14,6 @@ interface BlogPostCardProps {
   date: string;
   category: string;
   image: string;
-  id: number;
 }
 
 export default function BlogPostCard({
@@ -23,7 +22,6 @@ export default function BlogPostCard({
   date,
   category,
   image,
-  id,
 }: BlogPostCardProps) {
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg">

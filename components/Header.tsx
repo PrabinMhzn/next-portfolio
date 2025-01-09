@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { Button } from "./ui/button";
+import { Button } from "../components/ui/button";
 import Nav from "./Nav";
 import { ModeToggle } from "./ModeToggle";
 import MobileNav from "./MobileNav";
