@@ -67,3 +67,76 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer base {
+  /* Critical CSS styles here */
+  .container {
+    @apply flex flex-col items-center;
+  }
+  .text-2xl {
+    @apply text-2xl;
+  }
+  .text-3xl {
+    @apply text-3xl;
+  }
+  .text-4xl {
+    @apply text-4xl;
+  }
+  .text-5xl {
+    @apply text-5xl;
+  }
+  .font-bold {
+    @apply font-bold;
+  }
+  .text-gray-300 {
+    @apply text-gray-300;
+  }
+  .text-lime-400 {
+    @apply text-lime-400;
+  }
+  .uppercase {
+    @apply uppercase;
+  }
+  .mb-4 {
+    @apply mb-4;
+  }
+  .mb-6 {
+    @apply mb-6;
+  }
+  .text-center {
+    @apply text-center;
+  }
+  .relative {
+    @apply relative;
+  }
+  .w-48 {
+    @apply w-48;
+  }
+  .h-48 {
+    @apply h-48;
+  }
+  .sm:w-56 {
+    @apply sm:w-56;
+  }
+  .sm:h-56 {
+    @apply sm:h-56;
+  }
+  .md:w-64 {
+    @apply md:w-64;
+  }
+  .md:h-64 {
+    @apply md:h-64;
+  }
+  .mb-6 {
+    @apply mb-6;
+  }
+  .sm:mb-8 {
+    @apply sm:mb-8;
+  }
+  .rounded-full {
+    @apply rounded-full;
+  }
+  .overflow-hidden {
+    @apply overflow-hidden;
+  }
+}

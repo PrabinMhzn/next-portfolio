@@ -1,13 +1,13 @@
 "use client";
-
-import React from "react";
-import Portfolio from "./portfolio/page";
+import Image from "next/image";
+import React, { Suspense } from "react";
 import { SocialFloatingDock } from "@/components/Socials";
 import { motion } from "framer-motion";
-import portfolioAvatar from "@/images/portfolioAvatar.png";
+import portfolioAvatar from "@/public/images/portfolioAvatar.png";
 
-import Skills from "@/components/Skills";
-import About from "@/components/About";
+const Portfolio = React.lazy(() => import("./portfolio/page"));
+const About = React.lazy(() => import("@/components/About"));
+const Skills = React.lazy(() => import("@/components/Skills"));
 
 const Home: React.FC = () => {
   const containerVariants = {
@@ -45,7 +45,7 @@ const Home: React.FC = () => {
         variants={itemVariants}
       >
         <motion.h1
-          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-300 font-bold mb-4 sm:mb-6 text-center uppercase"
+          className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-gray-300 font-bold mb-4 sm:mb-6 text-center uppercase"
           variants={itemVariants}
         >
           Hello! My name is
@@ -91,15 +91,21 @@ const Home: React.FC = () => {
       </motion.section>
 
       <motion.section variants={itemVariants}>
-        <Portfolio />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Portfolio />
+        </Suspense>
       </motion.section>
 
       <motion.section variants={itemVariants}>
-        <About />
+        <Suspense fallback={<div>Loading...</div>}>
+          <About />
+        </Suspense>
       </motion.section>
 
       <motion.section variants={itemVariants}>
-        <Skills />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Skills />
+        </Suspense>
       </motion.section>
     </motion.main>
   );
