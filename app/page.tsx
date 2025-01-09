@@ -4,6 +4,7 @@ import React from "react";
 import Portfolio from "./portfolio/page";
 import { SocialFloatingDock } from "@/components/Socials";
 import { motion } from "framer-motion";
+import portfolioAvatar from "@/images/portfolioAvatar.png";
 
 import Skills from "@/components/Skills";
 import About from "@/components/About";
@@ -72,7 +73,7 @@ const Home: React.FC = () => {
           variants={itemVariants}
         >
           <motion.img
-            src="../images/portfolioAvatar.png"
+            src={portfolioAvatar.src}
             className="w-full h-full object-cover"
             alt="Prabin Maharjan"
           />
