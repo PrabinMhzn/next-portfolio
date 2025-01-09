@@ -34,17 +34,17 @@ const Home: React.FC = () => {
 
   return (
     <motion.main
-      className="flex flex-col space-y-20 mt-8 m-8"
+      className="flex flex-col space-y-20 mt-8 items-center justify-center"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       <motion.section
-        className=" max-w-screen-lg mx-auto flex flex-col items-center"
+        className=" max-w-screen-lg mx-auto flex flex-col items-center h-screen sm:mt-8 mt-20"
         variants={itemVariants}
       >
         <motion.h1
-          className="text-4xl sm:text-6xl text-gray-300 font-bold mb-2 text-center uppercase"
+          className="text-4xl sm:text-6xl text-gray-300 font-bold mb-2 text-center uppercase p-8"
           variants={itemVariants}
         >
           Hello! My name is

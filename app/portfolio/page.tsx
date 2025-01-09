@@ -84,15 +84,6 @@ const Portfolio: React.FC = () => {
           ))}
         </div>
       </div>
-
-      <div>
-        <Link href="/ExplainationPage" passHref>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            View Documentation
-          </button>
-        </Link>
-      </div>
-
       <Drawer open={isDrawerOpen} onOpenChange={setIsDrawerOpen}>
         <DrawerContent className="flex justify-center items-center">
           <DrawerHeader>
