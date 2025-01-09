@@ -10,7 +10,13 @@ interface TimelineEvent {
 }
 
 const Timeline: React.FC = () => {
-  const [events, setEvents] = useState<TimelineEvent[]>([]);
+  const [events, setEvents] = useState<TimelineEvent[]>([
+    {
+      date: "2023-01-01",
+      title: "Default Event",
+      description: "This is a default event description.",
+    },
+  ]);
   const [error, setError] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
 
@@ -18,7 +24,9 @@ const Timeline: React.FC = () => {
     fetch("/data/timeline.json")
       .then((response) => {
         if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
+          throw new Error(
+            `HTTP error! Status: ${response.status} - ${response.statusText} while fetching /data/timeline.json`
+          );
         }
         return response.json();
       })
@@ -27,7 +35,6 @@ const Timeline: React.FC = () => {
         setIsLoading(false);
       })
       .catch((error) => {
-        console.error("Error fetching timeline data:", error);
         setError("Error loading timeline data.");
         setIsLoading(false);
       });
@@ -47,10 +54,9 @@ const Timeline: React.FC = () => {
         <div className=" flex flex-col items-center space-y-12 relative z-10 ">
           <SeeMoreButton
             items={events}
-            initialVisibleCount={3}
             renderItem={(event, index) => (
               <motion.div
-                key={index}
+                key={event.date}
                 className="flex items-center w-full"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -62,7 +68,7 @@ const Timeline: React.FC = () => {
                     {event.date}
                   </p>
                 </div>
-                <div className="w-4 h-4 bg-lime-500 rounded-full justify-center"></div>
+                <div className="w-4 h-4 bg-lime-500 rounded-full"></div>
                 <div className="flex-1 pl-8">
                   <h3 className="text-xl font-semibold">{event.title}</h3>
                   <p className="text-gray-700 dark:text-gray-300 mt-2">

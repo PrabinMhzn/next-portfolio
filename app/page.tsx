@@ -41,7 +41,7 @@ const Home: React.FC = () => {
       animate="visible"
     >
       <motion.section
-        className="max-w-screen-lg mx-auto flex flex-col items-center min-h-screen px-4 sm:px-6 lg:px-8 py-12 sm:py-16"
+        className="max-w-screen-lg mx-auto flex flex-col items-center min-h-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16"
         variants={itemVariants}
       >
         <motion.h1

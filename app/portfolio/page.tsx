@@ -54,10 +54,10 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center  mb-8">
+    <div className="flex flex-col justify-center mb-8">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full min-h-screen">
         <motion.div
-          className="pb-8 mt-16"
+          className="pb-8 mt-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
