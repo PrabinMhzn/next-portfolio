@@ -34,17 +34,17 @@ const Home: React.FC = () => {
 
   return (
     <motion.main
-      className="flex flex-col space-y-20 mt-8 items-center justify-center"
+      className="flex flex-col space-y-20 @md:mt-8 items-center justify-center"
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
       <motion.section
-        className=" max-w-screen-lg mx-auto flex flex-col items-center h-screen sm:mt-8 mt-20"
+        className="max-w-screen-lg mx-auto flex flex-col items-center min-h-screen px-4 sm:px-6 lg:px-8 py-12 sm:py-16"
         variants={itemVariants}
       >
         <motion.h1
-          className="text-4xl sm:text-6xl text-gray-300 font-bold mb-2 text-center uppercase p-8"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-300 font-bold mb-4 sm:mb-6 text-center uppercase"
           variants={itemVariants}
         >
           Hello! My name is
@@ -61,19 +61,20 @@ const Home: React.FC = () => {
         </motion.h1>
 
         <motion.h2
-          className="font-bold text-2xl mb-8 text-center"
+          className="font-bold text-xl sm:text-2xl mb-6 sm:mb-8 text-center"
           variants={itemVariants}
         >
           Software Engineer | Full Stack Developer
         </motion.h2>
 
         <motion.div
-          className="relative w-64 h-64 mb-8 rounded-full overflow-hidden"
+          className="relative w-48 h-48 sm:w-56 sm:h-56 md:w-64 md:h-64 mb-6 sm:mb-8 rounded-full overflow-hidden"
           variants={itemVariants}
         >
           <motion.img
             src="../images/portfolioAvatar.png"
             className="w-full h-full object-cover"
+            alt="Prabin Maharjan"
           />
           <motion.div
             className="absolute inset-0 bg-lime-400 mix-blend-overlay"
@@ -87,6 +88,7 @@ const Home: React.FC = () => {
           <SocialFloatingDock />
         </motion.div>
       </motion.section>
+
       <motion.section variants={itemVariants}>
         <Portfolio />
       </motion.section>

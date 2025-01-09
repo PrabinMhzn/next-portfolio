@@ -27,7 +27,7 @@ const Header = () => {
   };
 
   return (
-    <header className="flex py-8 xl:py-12 text-gray-400 w-screen ">
+    <header className="flex py-8 xl:py-12 text-gray-400 w-full ">
       <div className="container mx-auto flex  justify-between items-center gap-8">
         <ModeToggle />
         <div>
