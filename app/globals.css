@@ -73,18 +73,6 @@
   .container {
     @apply flex flex-col items-center;
   }
-  .text-2xl {
-    @apply text-2xl;
-  }
-  .text-3xl {
-    @apply text-3xl;
-  }
-  .text-4xl {
-    @apply text-4xl;
-  }
-  .text-5xl {
-    @apply text-5xl;
-  }
   .font-bold {
     @apply font-bold;
   }
