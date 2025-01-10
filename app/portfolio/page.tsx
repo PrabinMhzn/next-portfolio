@@ -62,9 +62,7 @@ const Portfolio: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-4xl font-bold inline border-b-4 border-lime-400">
-            Portfolio
-          </p>
+          <p className="text-4xl font-bold inline text-lime-400">Portfolio</p>
           <p className="py-4">Check out my works here</p>
         </motion.div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-12 px-4 sm:px-0">

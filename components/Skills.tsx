@@ -57,7 +57,7 @@ const initialSkills = [
   },
 ];
 
-const shuffleArray = (array: any[]) => {
+const shuffleSkillsArray = (array: any[]) => {
   const newArray = [...array];
   for (let i = newArray.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -70,7 +70,7 @@ const Skills: React.FC = () => {
   const [skills, setSkills] = useState(initialSkills);
 
   const repositionSkills = () => {
-    setSkills(shuffleArray(skills));
+    setSkills(shuffleSkillsArray(skills));
   };
 
   return (

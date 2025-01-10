@@ -8,7 +8,6 @@ import {
   IconDownload,
   IconMail,
 } from "@tabler/icons-react";
-import Image from "next/image";
 
 export function SocialFloatingDock() {
   const links = [
@@ -32,7 +31,7 @@ export function SocialFloatingDock() {
       icon: (
         <IconDownload className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "/ResumeSD.pdf",
+      href: "/Resume.pdf",
     },
     {
       title: "Email",
@@ -40,13 +39,6 @@ export function SocialFloatingDock() {
         <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "mailto:foo.gmail.com",
-    },
-    {
-      title: "Changelog",
-      icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
     },
 
     {
@@ -56,17 +48,10 @@ export function SocialFloatingDock() {
       ),
       href: "#",
     },
-    {
-      title: "GitHub",
-      icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
   ];
   return (
-    <div className="flex justify-center h-[8rem] w-full mt-8">
-      <FloatingDock mobileClassName="translate-x-40" items={links} />
+    <div className="flex justify-center  w-full mt-8 sm:mt-4 ">
+      <FloatingDock mobileClassName="sm:translate-x-0" items={links} />
     </div>
   );
 }

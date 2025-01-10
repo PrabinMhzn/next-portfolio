@@ -24,7 +24,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
   return (
     <div className="max-w-xs rounded-xl transform transition-transform duration-700 hover:scale-105 bg-white hover:shadow-lime-500 shadow-xl pb-4 ">
       <div
-        className="max-w-xs max-h-60 rounded-xl duration-500 bg-lime-600 p-8 shadow-black hover:shadow-xl hover:translate-x-3 hover:translate-y-3 hover:cursor-pointer"
+        className="max-w-xs max-h-60 rounded-xl duration-500 bg-neutral-400 p-8 shadow-black hover:shadow-xl hover:translate-x-3 hover:translate-y-3 hover:cursor-pointer"
         onClick={onClick}
       >
         <img

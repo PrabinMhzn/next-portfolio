@@ -27,13 +27,13 @@ const Header = () => {
   };
 
   return (
-    <header className="flex py-8 xl:py-12 text-gray-400 w-full ">
+    <header className="flex py-8 xl:py-12 text-neutral-200 w-full ">
       <div className="container mx-auto flex  justify-between items-center gap-8">
         <ModeToggle />
         <div>
           <Link href="/">
-            <h1 className=" text-4xl sm:text-5xl font-semibold text-lime-400 hover:scale-110 duration-500">
-              Prabin<span className="text-lime-200">.</span>
+            <h1 className=" text-3xl sm:text-4xl font-semibold text-lime-500 hover:scale-110 duration-500">
+              Prabin<span className="text-lime-300">.</span>
             </h1>
           </Link>
         </div>

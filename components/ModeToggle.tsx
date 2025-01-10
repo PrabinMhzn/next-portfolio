@@ -9,10 +9,10 @@ import { Switch } from "@/components/ui/switch";
 
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
-  const [isDarkMode, setIsDarkMode] = useState<boolean | undefined>(undefined);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   useEffect(() => {
-    if (theme) {
+    if (theme !== undefined) {
       setIsDarkMode(theme === "dark");
     }
   }, [theme]);
@@ -24,8 +24,15 @@ export function ModeToggle() {
   };
 
   if (isDarkMode === undefined) {
-    // Optionally render a loading state or nothing while determining the theme
-    return null;
+    // Render a loading state or apply a default theme while determining the theme
+    return (
+      <div className="flex items-center space-x-2">
+        <Switch id="theme-toggle" checked={false} disabled />
+        <Label htmlFor="theme-toggle">
+          <Sun className="h-[1.2rem] w-[1.2rem]" />
+        </Label>
+      </div>
+    );
   }
 
   return (
@@ -34,6 +41,7 @@ export function ModeToggle() {
         id="theme-toggle"
         checked={isDarkMode}
         onCheckedChange={handleToggle}
+        aria-label="Toggle dark mode"
       />
       <Label htmlFor="theme-toggle">
         {isDarkMode ? (
