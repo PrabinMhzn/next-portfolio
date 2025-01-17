@@ -10,7 +10,7 @@ import {
   FaGitAlt,
   FaPython,
 } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
+import { SiShadcnui, SiTypescript } from "react-icons/si";
 
 const initialSkills = [
   {
@@ -54,6 +54,11 @@ const initialSkills = [
     title: "Python",
     icon: <FaPython className="text-4xl" />,
     description: "Scripting, data analysis, and backend development",
+  },
+  {
+    title: "Shadcn UI",
+    icon: <SiShadcnui className="text-4xl" />,
+    description: "Collection of re-usable libraries for UI development",
   },
 ];
 

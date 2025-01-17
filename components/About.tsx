@@ -6,16 +6,6 @@ const About: React.FC = () => {
   const [text, setText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
   const fullText = `Hello! I'm Prabin Maharjan, a passionate Full Stack Developer.
-My journey began with a fascination for technology and problem-solving.
-
-I started coding at a young age, initially dabbling in HTML and CSS to create simple websites.
-As I delved deeper into programming, I discovered the power of JavaScript and its frameworks.
-
-Over the years, I've honed my skills in both front-end and back-end development, mastering technologies like React, Node.js, and TypeScript.
-I love building innovative web applications that provide seamless user experiences.
-
-When I'm not coding, you can find me exploring the great outdoors, hiking new trails, or experimenting with new recipes in the kitchen.
-I believe in continuous learning and strive to stay updated with the latest trends in technology.
 
 Join me on this exciting journey as I continue to grow and create impactful solutions!`;
 
