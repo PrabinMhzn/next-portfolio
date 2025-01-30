@@ -11,7 +11,6 @@ import {
   DrawerTitle,
 } from "@/components/ui/drawer";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 
 interface PortfolioItem {
   id: number;

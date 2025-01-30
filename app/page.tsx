@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import React, { Suspense } from "react";
 import { SocialFloatingDock } from "@/components/Socials";
 import { motion } from "framer-motion";
