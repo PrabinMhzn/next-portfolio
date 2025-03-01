@@ -9,7 +9,7 @@
   },
   {
     "id": 2,
-    "src": "",
+    "src": "../images/portfolio/mymcha.jpg",
     "title": "Mymcha-Clothing Brand",
     "demoUrl": "https://mymcha.vercel.app/",
     "codeUrl": "https://github.com/PrabinMhzn/mymcha.git"

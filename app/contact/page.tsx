@@ -40,7 +40,7 @@ const ContactPage = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
+                transition={{ duration: 0.3 }}
                 className="text-lime-600 dark:text-lime-400 text-xl font-semibold"
               >
                 Thank you for your message! I will get back to you soon.

@@ -4,7 +4,7 @@ import Timeline from "@/components/Timeline";
 import { IconDownload } from "@tabler/icons-react";
 import React, { use } from "react";
 
-function Resume() {
+function AboutPage() {
   const handleClick = () => {
     window.open("/Resume.pdf", "_blank");
   };
@@ -34,4 +34,4 @@ function Resume() {
   );
 }
 
-export default Resume;
+export default AboutPage;

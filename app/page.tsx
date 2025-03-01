@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import portfolioAvatar from "@/public/images/portfolioAvatar.png";
 
 const Portfolio = React.lazy(() => import("./portfolio/page"));
-const About = React.lazy(() => import("@/components/About"));
+
 const Skills = React.lazy(() => import("@/components/Skills"));
 
 const Home: React.FC = () => {
@@ -77,7 +77,7 @@ const Home: React.FC = () => {
             alt="Prabin Maharjan"
           />
           <motion.div
-            className="absolute inset-0 bg-lime-400 mix-blend-overlay"
+            className="absolute inset-0 bg-lime-500 mix-blend-overlay"
             initial={{ opacity: 0 }}
             whileHover={{ opacity: 0.3 }}
             transition={{ duration: 0.3 }}
@@ -92,12 +92,6 @@ const Home: React.FC = () => {
       <motion.section variants={itemVariants}>
         <Suspense fallback={<div>Loading...</div>}>
           <Portfolio />
-        </Suspense>
-      </motion.section>
-
-      <motion.section variants={itemVariants}>
-        <Suspense fallback={<div>Loading...</div>}>
-          <About />
         </Suspense>
       </motion.section>
 
