@@ -14,7 +14,7 @@ export function SocialFloatingDock() {
     {
       title: "Linked In",
       icon: (
-        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandLinkedin className="h-full w-full text-neutral-200 hover: dark:text-lime-300" />
       ),
       href: "https://www.linkedin.com/in/prabin-maharjan93/",
     },
@@ -22,21 +22,21 @@ export function SocialFloatingDock() {
     {
       title: "Github",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandGithub className="h-full w-full text-neutral-200 dark:text-lime-300" />
       ),
       href: "https://github.com/PrabinMhzn",
     },
     {
       title: "Resume",
       icon: (
-        <IconDownload className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconDownload className="h-full w-full text-neutral-200 dark:text-lime-300" />
       ),
       href: "/Resume.pdf",
     },
     {
       title: "Email",
       icon: (
-        <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconMail className="h-full w-full text-neutral-200 dark:text-lime-300" />
       ),
       href: "mailto:foo.gmail.com",
     },
@@ -44,7 +44,7 @@ export function SocialFloatingDock() {
     {
       title: "Twitter",
       icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconBrandX className="h-full w-full text-neutral-200 dark:text-lime-300" />
       ),
       href: "#",
     },

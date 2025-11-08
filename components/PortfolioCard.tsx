@@ -22,7 +22,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
   onButtonClick,
 }) => {
   return (
-    <div className="max-w-xs rounded-xl transform transition-transform duration-700 hover:scale-105 bg-white hover:shadow-lime-500 shadow-xl pb-4 ">
+    <div className="max-w-xs h-[400px] rounded-xl transform transition-transform duration-700 hover:scale-105 bg-white hover:shadow-lime-500 shadow-xl pb-4 ">
       <div
         className="max-w-xs max-h-60 rounded-xl duration-500 bg-neutral-400 p-8 shadow-black hover:shadow-xl hover:translate-x-3 hover:translate-y-3 hover:cursor-pointer"
         onClick={onClick}
@@ -36,7 +36,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
 
       <div className="px-6 py-4">
         <div className="h-auto mb-4">
-          <h1 className="font-bold text-xl mb-2 text-gray-800 mt-4 ">
+          <h1 className="font-semibold text-lg b-2 text-gray-800 mt-4 ">
             {title}
           </h1>
         </div>
