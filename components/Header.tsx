@@ -43,7 +43,7 @@ const Header = () => {
 
           <Button
             onClick={openModal}
-            className="bg-lime-500 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded"
+            className="bg-lime-500 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded text-md "
           >
             Hire Me
           </Button>

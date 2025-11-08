@@ -47,7 +47,7 @@ export function ModeToggle() {
         {isDarkMode ? (
           <Moon className="h-[1.2rem] w-[1.2rem]" />
         ) : (
-          <Sun className="h-[1.2rem] w-[1.2rem]" />
+          <Sun className="h-[1.2rem] w-[1.2rem] text-neutral-800" />
         )}
       </Label>
     </div>
