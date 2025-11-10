@@ -2,33 +2,95 @@
 
 import Timeline from "@/components/Timeline";
 import { IconDownload } from "@tabler/icons-react";
-import React, { use } from "react";
+import React from "react";
+import { motion } from "framer-motion";
+import Skills from "@/components/Skills";
 
 function AboutPage() {
   const handleClick = () => {
     window.open("/Resume.pdf", "_blank");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-screen min-h-screen mb-8 ">
-      <button
+    <div className="flex flex-col items-center justify-center w-screen min-h-screen mb-8 px-4">
+      {/* About Me Section */}
+      <motion.div
+        className="max-w-4xl w-full mx-auto mb-12 px-4 mt-4"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 0.6 }}
+      >
+        <h2 className="text-3xl font-bold text-lime-500 mb-6 text-center md:text-left">
+          About Me
+        </h2>
+
+        <div className="flex flex-col md:flex-row gap-8 items-start">
+          {/* Left: Personal Statement */}
+          <div className=" text-gray-700 dark:text-gray-300 text-lg">
+            <p className="mb-4">
+              I am a creative and detail-oriented software engineer who turns
+              ideas into engaging web experiences. I thrive on solving problems,
+              crafting responsive designs, and building applications that users
+              love.
+            </p>
+            <p>
+              With hands-on experience in modern web technologies, I am
+              passionate about creating scalable, responsive, and user-friendly
+              applications while constantly learning new tools and techniques.
+            </p>
+          </div>
+        </div>
+      </motion.div>
+      {/* Skills Section */}
+      <Skills />
+
+      {/* Divider */}
+      <div className="w-96 h-1 bg-lime-500 my-8 mx-auto" />
+
+      {/* Resume Button */}
+      <motion.button
         className="flex bg-lime-500 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded mb-8 items-center space-x-2 hover:scale-110 duration-200"
         onClick={handleClick}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 0.5 }}
       >
         <IconDownload className="text-white" />
-        <span>Resume </span>
-      </button>
-      <h1 className="text-4xl text-lime-500 mb-4">
-        Prabin.<span className="text-neutral-700"> Timeline</span>
-      </h1>
-      <div className="border-2 border-lime-900 mx-8 flex flex-col shadow-lg w-2/3">
+        <span> Download Resume</span>
+      </motion.button>
+
+      {/* Timeline Title */}
+      <motion.h1
+        className="text-4xl text-lime-500 mb-4 text-center md:mt-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      >
+        Professional.
+        <span className="text-neutral-700 dark:text-neutral-300">Timeline</span>
+      </motion.h1>
+
+      {/* Timeline Section */}
+      <motion.div
+        className="border-2 border-lime-900 mx-4 md:mx-8 flex flex-col shadow-lg w-full md:w-2/3 rounded-lg"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.6 }}
+        transition={{ duration: 0.6, delay: 0.3 }}
+      >
         <div className="flex flex-col items-center justify-center">
           <Timeline />
         </div>
-        <div className="flex flex-row gap-4 p-8"></div>
-        <div className="flex flex-row gap-4 p-8">
-          {/* Placeholder for future content */}
-        </div>
+      </motion.div>
+
+      {/* Future Content Placeholder */}
+      <div className="flex flex-row gap-4 p-8"></div>
+      <div className="flex flex-row gap-4 p-8">
+        {/* Add more sections/cards here later */}
       </div>
     </div>
   );

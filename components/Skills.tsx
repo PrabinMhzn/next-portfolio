@@ -1,6 +1,8 @@
 // components/Skills.tsx
-import React, { useState } from "react";
-import { motion, AnimatePresence, useMotionValue } from "framer-motion";
+"use client";
+
+import React from "react";
+import { motion } from "framer-motion";
 import {
   FaReact,
   FaNodeJs,
@@ -12,131 +14,79 @@ import {
 } from "react-icons/fa";
 import { SiShadcnui, SiTypescript } from "react-icons/si";
 
-const initialSkills = [
+interface Skill {
+  title: string;
+  icon: React.ReactNode;
+}
+
+const skills: Skill[] = [
   {
     title: "JavaScript",
-    icon: <FaJsSquare className="text-4xl" />,
-    description: "Building interactive and dynamic web applications",
+    icon: <FaJsSquare className="text-5xl text-yellow-400" />,
   },
-  {
-    title: "React",
-    icon: <FaReact className="text-4xl" />,
-    description:
-      "Creating reusable UI components and managing application state",
-  },
-  {
-    title: "Node.js",
-    icon: <FaNodeJs className="text-4xl" />,
-    description: "Developing server-side applications and APIs",
-  },
+  { title: "React", icon: <FaReact className="text-5xl text-blue-400" /> },
+  { title: "Node.js", icon: <FaNodeJs className="text-5xl text-green-500" /> },
   {
     title: "TypeScript",
-    icon: <SiTypescript className="text-4xl" />,
-    description:
-      "Adding static typing to enhance code quality and maintainability",
+    icon: <SiTypescript className="text-5xl text-blue-600" />,
   },
-  {
-    title: "HTML5",
-    icon: <FaHtml5 className="text-4xl" />,
-    description: "Structuring web content with semantic markup",
-  },
-  {
-    title: "CSS3",
-    icon: <FaCss3Alt className="text-4xl" />,
-    description: "Styling and laying out web pages with modern techniques",
-  },
-  {
-    title: "Git",
-    icon: <FaGitAlt className="text-4xl" />,
-    description: "Version control and collaborative development",
-  },
-  {
-    title: "Python",
-    icon: <FaPython className="text-4xl" />,
-    description: "Scripting, data analysis, and backend development",
-  },
+  { title: "HTML5", icon: <FaHtml5 className="text-5xl text-orange-500" /> },
+  { title: "CSS3", icon: <FaCss3Alt className="text-5xl text-blue-500" /> },
+  { title: "Git", icon: <FaGitAlt className="text-5xl text-red-500" /> },
+  { title: "Python", icon: <FaPython className="text-5xl text-blue-400" /> },
   {
     title: "Shadcn UI",
-    icon: <SiShadcnui className="text-4xl" />,
-    description: "Collection of re-usable libraries for UI development",
+    icon: <SiShadcnui className="text-5xl text-lime-400" />,
   },
 ];
 
-const shuffleSkillsArray = (array: any[]) => {
-  const newArray = [...array];
-  for (let i = newArray.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
-  }
-  return newArray;
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.15 },
+  },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 40, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    rotate: 0,
+    transition: { type: "spring", stiffness: 120, damping: 15 },
+  },
 };
 
 const Skills: React.FC = () => {
-  const [skills, setSkills] = useState(initialSkills);
-
-  const repositionSkills = () => {
-    setSkills(shuffleSkillsArray(skills));
-  };
-
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <h2 className="text-3xl font-bold mb-6 text-lime-400 text-center">
+      <h2 className="text-3xl font-bold mb-8 text-lime-400 text-center">
         Skills
       </h2>
+
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        layout
+        className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 justify-items-center"
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
       >
-        <AnimatePresence>
-          {skills.map((skill) => (
-            <SkillCard
-              key={skill.title}
-              skill={skill}
-              onClick={repositionSkills}
-            />
-          ))}
-        </AnimatePresence>
+        {skills.map((skill) => (
+          <motion.div
+            key={skill.title}
+            className="w-32 h-32 bg-neutral-50 dark:bg-neutral-800 rounded-xl shadow-lg flex flex-col items-center justify-center cursor-pointer"
+            variants={cardVariants}
+            whileHover={{ scale: 1.08 }}
+            transition={{ type: "spring", stiffness: 100, damping: 18 }}
+          >
+            {skill.icon}
+            <h4 className="text-neutral-900 dark:text-neutral-50 font-semibold mt-2 text-lg text-center">
+              {skill.title}
+            </h4>
+          </motion.div>
+        ))}
       </motion.div>
     </div>
-  );
-};
-
-const SkillCard: React.FC<{ skill: any; onClick: () => void }> = ({
-  skill,
-  onClick,
-}) => {
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-
-  return (
-    <motion.div
-      className="p-4 bg-black rounded-lg shadow-lg cursor-pointer "
-      layout
-      drag
-      dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
-      dragElastic={0.1}
-      dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
-      whileDrag={{ scale: 1.05, zIndex: 1 }}
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.8 }}
-      transition={{
-        type: "spring",
-        stiffness: 300,
-        damping: 25,
-      }}
-      whileHover={{ scale: 1.05 }}
-      onClick={onClick}
-      style={{ x, y }}
-    >
-      <div className="flex justify-center mb-4">{skill.icon}</div>
-      <h4 className="text-zinc-100 font-bold tracking-wide text-center">
-        {skill.title}
-      </h4>
-      <p className="mt-2 text-neutral-400 tracking-wide leading-relaxed text-sm text-center">
-        {skill.description}
-      </p>
-    </motion.div>
   );
 };
 

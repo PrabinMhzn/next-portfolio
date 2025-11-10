@@ -46,7 +46,7 @@ const PortfolioFooter = () => {
           </div>
         </div>
         <div className="mt-6 border-t border-gray-700 pt-4 text-center text-sm">
-          <p>© {new Date().getFullYear()} Prabin. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Prabin. </p>
         </div>
       </div>
     </footer>

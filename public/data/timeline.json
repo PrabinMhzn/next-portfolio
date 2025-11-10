@@ -2,22 +2,49 @@
   {
     "date": "[2011 - 2015]",
     "title": "B.Sc. Computer Science and Information Technology",
-    "description": ""
-  },
-  {
-    "date": "[2015]",
-    "title": "Software Engineering  at Federation University",
-    "description": "Got Exposure to the various aspects of Software Development"
-  },
-  {
-    "date": "[2024]",
-    "title": "Fullstack with AWS BOOTCAMP - AUSBIZ Tech",
-    "description": "Gained expertise in full-stack development, covering front-end technologies like React.js, TypeScript, and Next.js 14 (App Router, Server-Side Rendering, API Development)."
+    "description": [
+      "Completed core courses in programming, algorithms, and data structures",
+      "Gained foundational knowledge in databases, networking, and software engineering",
+      "Participated in coding projects and assignments to build practical skills",
+      "Developed problem-solving and analytical thinking abilities",
+      "Graduated with strong academic performance and practical exposure"
+    ],
+    "type": "education"
   },
 
   {
+    "date": "[2020 - 2023]",
+    "title": "Master of Technology (Software Engineering)",
+    "description": [
+      "Enrolled at Federation University, Brisbane, Australia.",
+      " Gained advanced knowledge in software engineering concepts.",
+      " Focused on modern software development practices, algorithms, and project management",
+      "Achieved high academic performance (GPA 4.917)"
+    ],
+    "type": "education"
+  },
+
+  {
+    "date": "[2024]",
+    "title": "Fullstack with AWS Bootcamp - Ausbiz Tech",
+    "description": [
+      "Gained hands-on expertise in full-stack development",
+      "Worked extensively with React.js, TypeScript, and Next.js 14 (App Router, SSR, API Development)",
+      "Learned to integrate AWS services and cloud-based solutions",
+      "Improved skills in agile methodology, teamwork, and project management"
+    ],
+    "type": "bootcamp"
+  },
+  {
     "date": "[September 2024 - December 2024]",
-    "title": "Front End Web Developer Intern",
-    "description": "Worked with Aro software to design and style realstateclient websites. Got exposure to real world projects and learned how to work in a team."
+    "title": "Front End Web Developer Intern - Aro Software",
+    "description": [
+      "Designed and styled 12+ client websites ensuring full responsiveness and brand alignment",
+      "Implemented client-requested updates for 20+ projects with quick turnaround times",
+      "Optimized 100+ branding assets (logos, banners, favicons) reducing load times by 30%",
+      "Conducted quality assurance checks to ensure functionality, cross-browser compatibility, and responsiveness",
+      "Gained hands-on experience working in a team on real-world projects, improving collaboration and communication skills"
+    ],
+    "type": "internship"
   }
 ]
