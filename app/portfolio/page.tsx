@@ -53,7 +53,7 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col justify-center mb-8">
+    <div id="portfolio-section" className="flex flex-col justify-center mb-8">
       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full min-h-screen">
         <motion.div
           className="pb-8 mt-8"
@@ -61,7 +61,7 @@ const Portfolio: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <p className="text-4xl font-bold inline text-lime-400">Portfolio</p>
+          <h1 className="text-4xl font-bold inline text-lime-400">Portfolio</h1>
           <p className="py-4">Check out my works here</p>
         </motion.div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-12 px-4 sm:px-0">

@@ -21,14 +21,30 @@ const Header = () => {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const handleSubmit = (formData: FormData) => {
-    console.log("Form Submitted", formData);
-    closeModal();
+  const handleSubmit = async (formData: FormData) => {
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const result = await response.json();
+      if (result.success) {
+        alert("✅ Message sent successfully!");
+      } else {
+        alert("❌ Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("❌ Something went wrong. Please try again later.");
+    } finally {
+      closeModal();
+    }
   };
 
   return (
     <header className="flex py-8 xl:py-12 text-neutral-200 w-full ">
-      <div className="container mx-auto flex  justify-between items-center gap-8">
+      <div className="container mx-auto flex  justify-between items-center gap-16">
         <ModeToggle />
         <div>
           <Link href="/">
