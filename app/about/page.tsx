@@ -30,25 +30,25 @@ function AboutPage() {
           {/* Left: Personal Statement */}
           <div className=" text-gray-700 dark:text-gray-300 text-lg">
             <p className="mb-4">
-              I am a creative and detail-oriented software engineer who turns
-              ideas into engaging web experiences. I thrive on solving problems,
-              crafting responsive designs, and building applications that users
-              love.
+              Graduated with Masters degree in software Engineering, I am
+              Graduated with a Master’s degree in Software Engineering, I am
+              passionate about web technologies and creating digital experiences
+              that are both engaging and impactful. My professional journey
+              spans front-end development at Aro Software, freelance projects in
+              e-commerce and content platforms, and personal projects where I
+              merge creativity with functionality.
             </p>
             <p>
-              With hands-on experience in modern web technologies, I am
-              passionate about creating scalable, responsive, and user-friendly
-              applications while constantly learning new tools and techniques.
+              Based in Brisbane, I am eager to contribute to innovative teams
+              and take on challenging projects that allow me to grow as a
+              developer. With hands-on experience in React.js, Next.js,
+              TypeScript, Tailwind CSS, and UI/UX design, I focus on delivering
+              clean, scalable, and user-friendly web applications while
+              continuously expanding my skills.
             </p>
           </div>
         </div>
       </motion.div>
-      {/* Skills Section */}
-      <Skills />
-
-      {/* Divider */}
-      <div className="w-96 h-1 bg-lime-500 my-8 mx-auto" />
-
       {/* Resume Button */}
       <motion.button
         className="flex bg-lime-500 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded mb-8 items-center space-x-2 hover:scale-110 duration-200"
@@ -61,6 +61,12 @@ function AboutPage() {
         <IconDownload className="text-white" />
         <span> Download Resume</span>
       </motion.button>
+
+      {/* Skills Section */}
+      <Skills />
+
+      {/* Divider */}
+      <div className="w-96 h-1 bg-lime-500 my-8 mx-auto" />
 
       {/* Timeline Title */}
       <motion.h1
@@ -76,13 +82,13 @@ function AboutPage() {
 
       {/* Timeline Section */}
       <motion.div
-        className="border-2 border-lime-900 mx-4 md:mx-8 flex flex-col shadow-lg w-full md:w-2/3 rounded-lg"
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.6 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        className="border-2 border-lime-900 mx-4 md:mx-8 flex flex-col shadow-lg w-full md:w-2/3 rounded-lg overflow-hidden"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ staggerChildren: 0.2, duration: 0.6, ease: "easeOut" }}
       >
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center w-full">
           <Timeline />
         </div>
       </motion.div>

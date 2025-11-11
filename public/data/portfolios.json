@@ -2,15 +2,18 @@
   {
     "id": 1,
     "src": "/images/portfolio/freshbite.png",
-    "title": "FreshBite- Food delivery App ",
-    "description": "The application utilized React as the framework",
+    "title": "FreshBite - Food Delivery App",
+    "description": "A web app for browsing restaurants and ordering food online.",
+    "techStack": ["React", "Tailwind CSS", "Firebase", "Framer Motion"],
     "demoUrl": "https://freshbitefood.netlify.app/",
     "codeUrl": "https://github.com/PrabinMhzn/React-food-delivery-app"
   },
   {
     "id": 2,
-    "src": "../images/portfolio/mymcha.jpg",
-    "title": "Mymcha-Clothing Brand",
+    "src": "/images/portfolio/mymcha.jpg",
+    "title": "Mymcha - Clothing Brand",
+    "description": "E-commerce site showcasing trendy clothing with responsive design.",
+    "techStack": ["Next.js", "Shadcn/UI", "Tailwind CSS"],
     "demoUrl": "https://mymcha.vercel.app/",
     "codeUrl": "https://github.com/PrabinMhzn/mymcha.git"
   },
@@ -18,24 +21,18 @@
     "id": 3,
     "src": "/images/portfolio/deliciouspageimage.png",
     "title": "Delicious Mo:Mo",
-    "description": "Delicious Momo consists for extensive use of next js framework ",
+    "description": "A restaurant web app for exploring momo dishes and ordering online.",
+    "techStack": ["Next.js", "TypeScript", "Sanity CMS", "Tailwind CSS"],
     "demoUrl": "https://delicious-food-one-iota.vercel.app/",
     "codeUrl": "https://github.com/PrabinMhzn/delicious-food.git"
   },
   {
     "id": 4,
-    "src": "../images/portfolio/fementor.png",
+    "src": "/images/portfolio/fementor.png",
     "title": "Frontend Mentor Challenges",
-    "description": "This is a collection of challenges from Frontend Mentor",
+    "description": "A compilation of UI challenges showcasing modern layouts and responsive designs.",
+    "techStack": ["HTML", "CSS", "JavaScript"],
     "demoUrl": "https://f-echallege.netlify.app/",
     "codeUrl": "https://github.com/PrabinMhzn/FrontEndChallenge.git"
-  },
-  {
-    "id": 5,
-    "src": "#",
-    "title": "Project 5",
-    "description": "",
-    "demoUrl": "#",
-    "codeUrl": "#"
   }
 ]

@@ -16,7 +16,7 @@ const blogPosts = [
       "Learn how to use React Hooks to manage state and side effects in your functional components.",
     date: "2023-05-15",
     category: "React",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/images/blogs/reacthook.jpg",
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ const blogPosts = [
       "Discover how to create beautiful, responsive layouts quickly using Tailwind CSS utility classes.",
     date: "2023-06-02",
     category: "CSS",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/images/blogs/tailwind.jpeg",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const blogPosts = [
       "Explore the benefits of TypeScript and learn how to integrate it into your JavaScript projects.",
     date: "2023-06-20",
     category: "TypeScript",
-    image: "/placeholder.svg?height=200&width=300",
+    image: "/images/blogs/typescript.png",
   },
 ];
 
@@ -56,6 +56,11 @@ export default function BlogPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="mb-8 text-4xl font-bold">My Blog</h1>
+      <p>
+        {" "}
+        P.S. These are just dummy blog posts. I will start writing real blog
+        posts soon
+      </p>
       <div className="mb-8 text-lg text-muted-foreground">
         <Link href="/dashboard">
           <Button variant="outline">Dashboard</Button>

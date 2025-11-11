@@ -1,6 +1,9 @@
-// components/PortfolioCard.tsx
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 interface PortfolioCardProps {
   src: string;
@@ -8,8 +11,8 @@ interface PortfolioCardProps {
   description: string;
   demoUrl: string;
   codeUrl: string;
-  onClick: () => void;
-  onButtonClick: (url: string) => void;
+  techStack?: string[];
+  onClick?: () => void;
 }
 
 const PortfolioCard: React.FC<PortfolioCardProps> = ({
@@ -18,46 +21,81 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
   description,
   demoUrl,
   codeUrl,
+  techStack = [],
   onClick,
-  onButtonClick,
 }) => {
-  return (
-    <div className="max-w-xs h-[400px] rounded-xl transform transition-transform duration-700 hover:scale-105 bg-white hover:shadow-lime-500 shadow-xl pb-4 ">
-      <div
-        className="max-w-xs max-h-60 rounded-xl duration-500 bg-neutral-400 p-8 shadow-black hover:shadow-xl hover:translate-x-3 hover:translate-y-3 hover:cursor-pointer"
-        onClick={onClick}
-      >
-        <img
-          className="w-full h-48 object-cover rounded-xl hover:scale-110 duration-200 hover:shadow-xl hover:translate-y-3"
-          src={src}
-          alt={title}
-        />
-      </div>
+  const [isFlipped, setIsFlipped] = useState(false);
 
-      <div className="px-6 py-4">
-        <div className="h-auto mb-4">
-          <h1 className="font-semibold text-lg b-2 text-gray-800 mt-4 ">
-            {title}
-          </h1>
+  return (
+    <div
+      onClick={onClick}
+      className="relative w-[260px] sm:w-[280px] md:w-[300px] lg:w-[320px] h-[360px] [perspective:1200px]"
+      onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
+    >
+      <div
+        className={cn(
+          "relative w-full h-full transition-transform duration-700 [transform-style:preserve-3d]",
+          isFlipped
+            ? "[transform:rotateY(180deg)]"
+            : "[transform:rotateY(0deg)]"
+        )}
+      >
+        {/* FRONT SIDE */}
+        <div className="absolute inset-0 w-full h-full rounded-xl overflow-hidden shadow-xl bg-neutral-900 border border-lime-500/30 [backface-visibility:hidden] flex flex-col justify-between">
+          <div className="aspect-[4/3] bg-neutral-800 overflow-hidden">
+            <img
+              src={src}
+              alt={title}
+              className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+            />
+          </div>
+
+          <div className="p-4 text-center flex flex-col justify-between flex-1">
+            <h1 className="text-base font-semibold text-lime-300 mb-3">
+              {title}
+            </h1>
+          </div>
         </div>
 
-        <div className="flex px-6 pt-4 pb-2 items-center justify-center p-4 space-x-8">
-          <a href={demoUrl} target="_blank" rel="noopener noreferrer">
-            <Button
-              className="bg-black text-lime-400 hover:text-black hover:font-bold rounded-full text-xl"
-              onClick={() => onButtonClick(demoUrl)}
-            >
-              Demo
-            </Button>
-          </a>
-          <a href={codeUrl} target="_blank" rel="noopener noreferrer">
-            <Button
-              className="bg-black text-lime-400 hover:text-black hover:font-bold rounded-full text-xl"
-              onClick={() => onButtonClick(codeUrl)}
-            >
-              Code
-            </Button>
-          </a>
+        {/* BACK SIDE */}
+        <div className="absolute inset-0 w-full h-full rounded-xl bg-black border border-lime-500/40 text-white flex flex-col justify-center items-center p-5 [transform:rotateY(180deg)] [backface-visibility:hidden] shadow-xl z-10">
+          <h1 className="text-lime-400 font-semibold text-lg mb-3">{title}</h1>
+
+          <p className="text-xs text-gray-300 leading-snug text-center mb-4">
+            {description}
+          </p>
+
+          {techStack.length > 0 && (
+            <>
+              <h3 className="text-lime-400 font-medium text-sm mb-2">
+                Tech Stack
+              </h3>
+              <div className="flex flex-wrap justify-center gap-2">
+                {techStack.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="text-xs border border-lime-400/50 text-lime-300 px-2 py-1 rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </>
+          )}
+          <div className="flex justify-center items-center gap-4 mt-auto">
+            <a href={demoUrl} target="_blank" rel="noopener noreferrer">
+              <Button className="bg-neutral-300 text-black hover:bg-lime-500 font-medium rounded-full text-xs sm:text-sm px-6 py-1.5 transition-all duration-300 hover:scale-125 ">
+                Demo
+              </Button>
+            </a>
+
+            <a href={codeUrl} target="_blank" rel="noopener noreferrer">
+              <Button className="bg-neutral-300 text-black hover:bg-lime-500 font-medium rounded-full text-xs sm:text-sm px-6 py-1.5 transition-all duration-300 hover:scale-125">
+                Code
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </div>

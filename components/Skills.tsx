@@ -20,6 +20,9 @@ interface Skill {
 }
 
 const skills: Skill[] = [
+  { title: "HTML5", icon: <FaHtml5 className="text-5xl text-orange-500" /> },
+  { title: "CSS3", icon: <FaCss3Alt className="text-5xl text-blue-500" /> },
+
   {
     title: "JavaScript",
     icon: <FaJsSquare className="text-5xl text-yellow-400" />,
@@ -30,8 +33,7 @@ const skills: Skill[] = [
     title: "TypeScript",
     icon: <SiTypescript className="text-5xl text-blue-600" />,
   },
-  { title: "HTML5", icon: <FaHtml5 className="text-5xl text-orange-500" /> },
-  { title: "CSS3", icon: <FaCss3Alt className="text-5xl text-blue-500" /> },
+
   { title: "Git", icon: <FaGitAlt className="text-5xl text-red-500" /> },
   { title: "Python", icon: <FaPython className="text-5xl text-blue-400" /> },
   {
