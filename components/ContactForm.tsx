@@ -33,7 +33,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      <div>
+      <div className="text-neutral-300">
         <label htmlFor="name" className="block text-md font-medium">
           Name
         </label>
@@ -44,7 +44,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           value={formData.name}
           onChange={handleChange}
           required
-          className="mt-1 px-4 py-2 w-full rounded-md border-lime-300 shadow-sm focus:border-lime-500 focus:ring-lime-500 sm:text-sm text-neutral-900"
+          className="mt-1 px-4 py-2 w-full rounded-md border-lime-300 shadow-sm focus:border-lime-500 focus:ring-lime-500 sm:text-sm text-neutral-900 dark:text-neutral-50"
         />
       </div>
       <div>
@@ -58,7 +58,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="mt-1 px-4 py-2  w-full rounded-md text-neutral-900 border-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          className="mt-1 px-4 py-2  w-full rounded-md  border-gray-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm text-neutral-900 dark:text-neutral-50"
         />
       </div>
       <div>
@@ -71,7 +71,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           name="subject"
           value={formData.subject}
           onChange={handleChange}
-          className="mt-1 px-4 py-2  w-full rounded-md border-gray-300 text-neutral-900 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          className="mt-1 px-4 py-2  w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm text-neutral-900 dark:text-neutral-50"
         />
       </div>
       <div>
@@ -85,7 +85,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           value={formData.message}
           onChange={handleChange}
           required
-          className="mt-1 h-32 px-4 py-2 w-full rounded-md text-neutral-900 border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+          className="mt-1 h-32 px-4 py-2 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm text-neutral-900 dark:text-neutral-50"
         ></textarea>
       </div>
       <div>

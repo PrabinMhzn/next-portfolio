@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { Button } from "./ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 interface PortfolioModalProps {
   isOpen: boolean;
@@ -74,7 +75,7 @@ const PortfolioModal: React.FC<PortfolioModalProps> = ({
             </div>
 
             {/* Image */}
-            <img
+            <Image
               src={src}
               alt={title}
               className="w-full h-64 object-cover rounded-lg mb-4"

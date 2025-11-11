@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface PortfolioCardProps {
   src: string;
@@ -44,7 +45,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
         {/* FRONT SIDE */}
         <div className="absolute inset-0 w-full h-full rounded-xl overflow-hidden shadow-xl bg-neutral-900 border border-lime-500/30 [backface-visibility:hidden] flex flex-col justify-between">
           <div className="aspect-[4/3] bg-neutral-800 overflow-hidden">
-            <img
+            <Image
               src={src}
               alt={title}
               className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"

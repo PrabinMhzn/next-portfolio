@@ -84,10 +84,10 @@ const ContactPage = () => {
           className="text-center"
         >
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-lime-600 dark:text-lime-400 mb-4">
-            Let’s Connect & Collaborate
+            Let's Connect & Collaborate
           </h1>
           <p className="text-neutral-700 dark:text-neutral-300 text-lg sm:text-xl max-w-2xl mx-auto">
-            Whether it’s a project, idea, or just a friendly hello, I’d love to
+            Whether it's a project, idea, or just a friendly hello, I'd love to
             hear from you!
           </p>
           <button
