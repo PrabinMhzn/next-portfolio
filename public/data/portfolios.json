@@ -34,5 +34,20 @@
     "techStack": ["HTML", "CSS", "JavaScript"],
     "demoUrl": "https://f-echallege.netlify.app/",
     "codeUrl": "https://github.com/PrabinMhzn/FrontEndChallenge.git"
+  },
+  {
+    "id": 5,
+    "src": "/images/portfolio/D&Dtodo.jpg",
+    "title": "D&D To-Do List",
+    "description": "A modern, responsive task management web app built with Next.js and TypeScript. Features include drag-and-drop task organization, dynamic board and column creation, task modals with detailed descriptions and due dates, and user-friendly interactions. Designed with a colorful, theme-based interface and optimized for both desktop and mobile. Implements client-side state management, modals, and interactive UI components to provide a production-ready, visually engaging experience.",
+    "techStack": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "@hello-pangea/dnd"
+    ],
+    "demoUrl": "https://to-do-list-gamma-pink.vercel.app//",
+    "codeUrl": "https://github.com/PrabinMhzn/ToDo-List.git"
   }
 ]

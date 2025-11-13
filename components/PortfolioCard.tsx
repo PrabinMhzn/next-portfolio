@@ -68,7 +68,9 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
           <h1 className="text-lime-400 font-semibold text-lg mb-3">{title}</h1>
 
           <p className="text-xs text-gray-300 leading-snug text-center mb-4">
-            {description}
+            {description.length > 100
+              ? description.substring(0, 100) + "..."
+              : description}
           </p>
 
           {techStack.length > 0 && (
@@ -88,6 +90,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
               </div>
             </>
           )}
+
           <div className="flex justify-center items-center gap-4 mt-auto">
             <a href={demoUrl} target="_blank" rel="noopener noreferrer">
               <Button className="bg-neutral-300 text-black hover:bg-lime-500 font-medium rounded-full text-xs sm:text-sm px-6 py-1.5 transition-all duration-300 hover:scale-125 ">
