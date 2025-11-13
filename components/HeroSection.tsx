@@ -9,8 +9,6 @@ import {
 } from "framer-motion";
 import portfolioAvatar from "@/public/images/portfolioAvatar.png";
 import { SocialFloatingDock } from "@/components/Socials";
-import ParticleBackground from "@/components/ParticleBackground";
-import ScrollDownArrow from "@/components/ScrollDown";
 
 // Stickers
 import sticker1 from "@/public/images/stickers/skull-sticker.png";
@@ -100,8 +98,6 @@ const HeroSection = () => {
       variants={itemVariants}
       onClick={handleHeroClick}
     >
-      <ParticleBackground />
-
       {/* Main Heading */}
       <motion.h1
         className="text-center text-gray-300 font-bold uppercase text-3xl sm:text-4xl md:text-5xl lg:text:5xl mb-4 sm:mb-6"
@@ -174,12 +170,6 @@ const HeroSection = () => {
           />
         ))}
       </AnimatePresence>
-
-      {/* Scroll Down Arrow */}
-      <ScrollDownArrow
-        onClick={handleScrollDown}
-        className="hidden lg:flex absolute bottom-30 sm:bottom-12 left-2/3 transform -translate-x-1/2 "
-      />
     </motion.section>
   );
 };

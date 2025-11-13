@@ -43,17 +43,21 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
         )}
       >
         {/* FRONT SIDE */}
-        <div className="absolute inset-0 w-full h-full rounded-xl overflow-hidden shadow-xl bg-neutral-900 border border-lime-500/30 [backface-visibility:hidden] flex flex-col justify-between">
-          <div className="aspect-[4/3] bg-neutral-800 overflow-hidden">
+        <div className="absolute inset-0 w-full h-full rounded-xl overflow-hidden shadow-xl bg-neutral-900 border border-lime-500/30 [backface-visibility:hidden] flex flex-col">
+          {/* Image takes most of the space */}
+          <div className="w-full flex-1 overflow-hidden rounded-t-xl">
             <Image
               src={src}
               alt={title}
-              className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
+              width={400}
+              height={300}
+              className="w-full h-full object-cover transition-transform duration-300"
             />
           </div>
 
-          <div className="p-4 text-center flex flex-col justify-between flex-1">
-            <h1 className="text-base font-semibold text-lime-300 mb-3">
+          {/* Title area */}
+          <div className="p-3 sm:p-4 text-center">
+            <h1 className="text-base sm:text-sm md:text-base font-semibold text-lime-300">
               {title}
             </h1>
           </div>

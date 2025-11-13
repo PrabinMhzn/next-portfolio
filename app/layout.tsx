@@ -19,7 +19,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body
+        className={`${inter.className} pt-[90px] sm:pt-[100px] xl:pt-[120px]`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
@@ -27,7 +29,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          {children}
+          <main className="min-h-screen">{children}</main>
           <Footer />
         </ThemeProvider>
       </body>

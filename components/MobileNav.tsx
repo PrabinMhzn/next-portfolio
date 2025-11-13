@@ -19,46 +19,69 @@ const MobileNav = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const [mounted, setMounted] = React.useState(false);
 
-  // Prevent rendering until the component has mounted
+  // Prevent SSR mismatch
   React.useEffect(() => {
     setMounted(true);
   }, []);
 
-  const handleLinkClick = () => {
-    setIsOpen(false); // Close the sheet when a link is clicked
-  };
+  const handleLinkClick = () => setIsOpen(false);
 
   if (!mounted) return null;
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetTrigger className="flex justify-center items-center">
-        <CiMenuFries className="text-[42px] text-green-600" />
+      {/* Trigger Button */}
+      <SheetTrigger
+        aria-label="Open mobile menu"
+        className="flex justify-center items-center p-2 rounded-md hover:bg-lime-100/10 active:scale-95 transition-all"
+      >
+        <CiMenuFries className="text-[34px] sm:text-[40px] text-lime-500" />
       </SheetTrigger>
-      <SheetContent className="flex flex-col">
-        {/* {logo} */}
-        <div className=" mt-32 mb-40 text-center text-2xl">
+
+      {/* Drawer Content */}
+      <SheetContent
+        side="right"
+        className="
+          flex flex-col items-center justify-between
+          bg-neutral-900 text-white px-6 py-8
+          w-full sm:w-[80vw] md:w-[60vw]
+        "
+      >
+        {/* Logo */}
+        <div className="w-full text-center mt-10 mb-12">
           <Link href="/" onClick={handleLinkClick}>
-            <h1>
-              Prabin<span className="text-green-700">.</span>
+            <h1 className="text-3xl font-semibold text-lime-400 hover:scale-105 transition-transform">
+              Prabin<span className="text-lime-300">.</span>
             </h1>
           </Link>
         </div>
 
-        <nav className="flex flex-col justify-center items-center gap-8">
+        {/* Navigation Links */}
+        <nav className="flex flex-col items-center gap-6 w-full">
           {links.map((link, index) => (
             <Link
               href={link.path}
               key={index}
-              className={`${
-                link.path === pathname && " text-green-700 border-b-2"
-              } text-xl capitalize hover:text-green-500 transition-all`}
               onClick={handleLinkClick}
+              className={`
+                text-lg sm:text-xl capitalize tracking-wide 
+                transition-all duration-300 
+                ${
+                  pathname === link.path
+                    ? "text-lime-400 border-b-2 border-lime-400 pb-1"
+                    : "text-gray-300 hover:text-lime-400"
+                }
+              `}
             >
               {link.name}
             </Link>
           ))}
         </nav>
+
+        {/* Footer Section (Optional – social icons or contact info) */}
+        <div className="mt-16 text-sm text-gray-400">
+          <p>© {new Date().getFullYear()} Prabin</p>
+        </div>
       </SheetContent>
     </Sheet>
   );

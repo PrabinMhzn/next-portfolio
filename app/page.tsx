@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 const Portfolio = React.lazy(() => import("./portfolio/page"));
 const Skills = React.lazy(() => import("@/components/Skills"));
 import HeroSection from "@/components/HeroSection";
+import ParticlesBackground from "@/components/ParticleBackground";
 
 const Home: React.FC = () => {
   const containerVariants = {
@@ -21,6 +22,7 @@ const Home: React.FC = () => {
       initial="hidden"
       animate="visible"
     >
+      <ParticlesBackground />
       <HeroSection />
       <motion.section>
         <Suspense fallback={<div>Loading...</div>}>

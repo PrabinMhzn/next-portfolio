@@ -31,7 +31,6 @@ function AboutPage() {
           <div className=" text-gray-700 dark:text-gray-300 text-lg">
             <p className="mb-4">
               Graduated with Masters degree in software Engineering, I am
-              Graduated with a Master’s degree in Software Engineering, I am
               passionate about web technologies and creating digital experiences
               that are both engaging and impactful. My professional journey
               spans front-end development at Aro Software, freelance projects in
