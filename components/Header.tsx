@@ -29,10 +29,8 @@ const Header = () => {
       const currentScrollY = window.scrollY;
 
       if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
-        // user scrolls down → hide header
         setShowHeader(false);
       } else {
-        // user scrolls up → show header
         setShowHeader(true);
       }
 
@@ -65,46 +63,55 @@ const Header = () => {
   };
 
   return (
-    <header
-      className={`fixed top-0 left-0 w-full z-50 
-  bg-neutral-900/60 backdrop-blur-xl border-b border-neutral-800/50 
-  shadow-[0_2px_10px_rgba(0,0,0,0.2)] 
-  transition-transform duration-500 ${
-    showHeader ? "translate-y-0" : "-translate-y-full"
-  }`}
-    >
-      <div className="container mx-auto flex justify-between items-center px-4 py-4 relative">
-        {/* Left: Mode Toggle (always on left) */}
-        <div className="flex items-center">
-          <ModeToggle />
-        </div>
+    <>
+      <header
+        className={`fixed top-0 left-0 w-full z-50 
+        bg-neutral-50/30 dark:bg-neutral-900/30 backdrop-blur-xl 
+        shadow-[0_2px_10px_rgba(0,0,0,0.2)] 
+        transition-transform duration-500 ${
+          showHeader ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <div className="container mx-auto flex justify-between items-center px-4 py-4 relative">
+          {/* Left: Mode Toggle */}
+          <div className="flex items-center">
+            <ModeToggle />
+          </div>
 
-        {/* Center: Logo */}
-        <div className="absolute left-1/2 -translate-x-1/2 xl:static xl:translate-x-0">
-          <Link href="/">
-            <h1 className="text-2xl sm:text-3xl font-semibold text-lime-500 hover:scale-110 duration-500">
-              Prabin<span className="text-lime-300">.</span>
-            </h1>
-          </Link>
-        </div>
+          {/* Center: Logo */}
+          <div className="absolute left-1/2 -translate-x-1/2 xl:static xl:translate-x-0">
+            <Link href="/">
+              <h1 className="text-2xl sm:text-3xl font-semibold text-lime-500 hover:scale-110 duration-500">
+                Prabin<span className="text-lime-300">.</span>
+              </h1>
+            </Link>
+          </div>
 
-        {/* Right: Desktop Nav + Hire Me */}
-        <div className="hidden xl:flex items-center gap-8">
-          <Nav />
-          <Button
-            onClick={openModal}
-            className="bg-lime-500 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded text-md"
-          >
-            Hire Me
-          </Button>
-        </div>
+          {/* Right: Desktop Nav + Hire Me */}
+          <div className="hidden xl:flex items-center gap-8">
+            <Nav />
+            <Button
+              onClick={openModal}
+              className="bg-lime-500 hover:bg-lime-700 text-white font-bold py-2 px-4 rounded text-md"
+            >
+              Hire Me
+            </Button>
+          </div>
 
-        {/* Mobile Nav */}
-        <div className="flex items-center gap-3 xl:hidden">
-          <MobileNav />
+          {/* Mobile Nav */}
+          <div className="flex items-center gap-3 xl:hidden">
+            <MobileNav />
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      {/* ✅ Hire Me Modal restored */}
+      {isModalOpen && (
+        <HireMeModal isOpen={isModalOpen} onClose={closeModal}>
+          <ContactForm onSubmit={handleSubmit} />
+        </HireMeModal>
+      )}
+    </>
   );
 };
 

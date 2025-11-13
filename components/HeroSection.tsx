@@ -94,7 +94,7 @@ const HeroSection = () => {
 
   return (
     <motion.section
-      className="relative w-full flex flex-col items-center justify-center min-h-[calc(100vh-64px)] px-4 sm:px-6 lg:px-8 py-12 sm:py-16 overflow-hidden"
+      className="relative w-full flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-8 py-12 sm:py-16 overflow-hidden"
       variants={itemVariants}
       onClick={handleHeroClick}
     >

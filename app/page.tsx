@@ -17,7 +17,7 @@ const Home: React.FC = () => {
 
   return (
     <motion.main
-      className="flex flex-col space-y-20 @md:mt-8 items-center justify-center"
+      className="flex flex-col  @md:mt-8 items-center justify-center"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

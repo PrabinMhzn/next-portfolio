@@ -27,7 +27,13 @@ export default function BlogPostCard({
   return (
     <Card className="overflow-hidden transition-all hover:shadow-lg">
       <CardHeader className="p-0">
-        <Image src={image} alt={title} className="h-48 w-full object-cover" />
+        <Image
+          width={500}
+          height={300}
+          src={image}
+          alt={title}
+          className="h-48 w-full object-cover"
+        />
       </CardHeader>
       <CardContent className="p-4">
         <h2 className="mb-2 text-xl font-semibold">{title}</h2>
